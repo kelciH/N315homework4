@@ -1,0 +1,25 @@
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    opacity: 0;
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    will-change: transform, opacity;
+  }
+  
+  .toast.show {
+    transform: translate(-50%, 0);
+    /* Show the alert */
+    opacity: 1;
+  }
+  .toast.hide {
+    transform: translate(-50%, 150%); /* Hide the alert */
+    opacity: 0;
+  }
