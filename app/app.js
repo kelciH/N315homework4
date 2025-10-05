@@ -2,13 +2,13 @@ import { createToast } from "../lib/utility.js";
 import { route } from "../model/model.js";
 
 function initListeners (){
-    $("form button").on("click", (e) => {
+    $(document).on("submit", "#feedbackForm", (e) => {
         e.preventDefault();
 
         const un = $("#username").val().trim();
         console.log(un)
         let unl = un.length;
-        if (un == "") {
+        if (un == " ") {
             alert("Username Cannot Be Empty");
         } else if (unl < 8) {
             alert("Username Must Be At Least 8 Charaters Long");
